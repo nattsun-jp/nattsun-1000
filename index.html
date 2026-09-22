@@ -21,6 +21,7 @@ content="width=device-width,initial-scale=1.0"
   gtag('js', new Date());
   gtag('config', 'G-0XM8PME62R');
 </script>
+
 <style>
 
 *{
@@ -1018,10 +1019,7 @@ id="level"
 Lv.1
 </div>
 
-<div
-class="label"
-id="xp"
->
+<div class="label" id="xp">
 XP 0/100
 </div>
 
@@ -2419,51 +2417,46 @@ return r;
 }
 
 
+/* ===== NaN修正済み ===== */
+
 function viewBonus(){
 
-return
-
+return (
 (1+(game.camera-1)*.18)
-
 *
-
 (1+(game.playerLevel-1)*.1)
-
 *
-
 (1+(game.thumbnail-1)*.08)
-
 *
-
-(1+(game.studio-1)*.05);
+(1+(game.studio-1)*.05)
+);
 
 }
 
 
 function subBonus(){
 
-return
-
+return (
 (1+(game.mic-1)*.12)
-
 *
-
-(1+(game.studio-1)*.03);
+(1+(game.studio-1)*.03)
+);
 
 }
 
 
 function engagementBonus(){
 
-return
-
+return (
 (1+(game.editing-1)*.15)
-
 *
-
-(1+(game.mic-1)*.04);
+(1+(game.mic-1)*.04)
+);
 
 }
+
+
+/* ===== ここまでNaN修正 ===== */
 
 
 function buzzChance(){
